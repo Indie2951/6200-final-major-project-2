@@ -41,6 +41,10 @@ public class falling_platform : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "floor")
+        {
+            Destroy(gameObject);
+        }
         activate = true;
     }
 }
